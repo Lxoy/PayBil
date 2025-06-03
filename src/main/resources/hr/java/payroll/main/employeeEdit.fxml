@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1400.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.payroll.controller.EmployeeEditController">
+    <fx:include source="adminMenu.fxml" />
+    <GridPane layoutY="26.0" prefHeight="675.0" prefWidth="1400.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <Label text="Edit Employee" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+                <font>
+                    <Font name="System Bold Italic" size="36.0" />
+                </font>
+            </Label>
+         <ComboBox fx:id="employeeEditAllEmployeesComboBox" maxWidth="250.0" prefWidth="250.0" promptText="Select employee" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <GridPane GridPane.rowIndex="2">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="579.0" minWidth="10.0" prefWidth="396.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <Label text="First name:" GridPane.halignment="RIGHT">
+                        <font>
+                            <Font name="Verdana" size="24.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="employeeEditFirstNameTextField" maxWidth="250.0" prefWidth="250.0" promptText="-" GridPane.columnIndex="1">
+                        <GridPane.margin>
+                            <Insets left="10.0" />
+                        </GridPane.margin>
+                    </TextField>
+                </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="508.0" minWidth="10.0" prefWidth="508.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <Label text="Last name:" GridPane.halignment="RIGHT">
+                        <font>
+                            <Font name="Verdana" size="24.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="employeeEditLastNameTextField" maxWidth="250.0" prefWidth="250.0" promptText="-" GridPane.columnIndex="1">
+                        <GridPane.margin>
+                            <Insets left="10.0" />
+                        </GridPane.margin>
+                    </TextField>
+                </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="3">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="608.0" minWidth="10.0" prefWidth="572.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <Label text="Email:" GridPane.halignment="RIGHT">
+                        <font>
+                            <Font name="Verdana" size="24.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="employeeEditEmailTextField" maxWidth="250.0" prefWidth="250.0" promptText="-" GridPane.columnIndex="1">
+                        <GridPane.margin>
+                            <Insets left="10.0" />
+                        </GridPane.margin>
+                    </TextField>
+                </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <Label text="Password:" GridPane.halignment="RIGHT">
+                        <font>
+                            <Font name="Verdana" size="24.0" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="employeeEditPasswordTextField" maxWidth="250.0" prefWidth="250.0" promptText="-" GridPane.columnIndex="1">
+                        <GridPane.margin>
+                            <Insets left="10.0" />
+                        </GridPane.margin>
+                    </TextField>
+                </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="4">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="586.0" minWidth="10.0" prefWidth="575.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <Label text="Date of birth:" GridPane.halignment="RIGHT">
+                        <font>
+                            <Font name="Verdana" size="24.0" />
+                        </font>
+                    </Label>
+                    <DatePicker fx:id="employeeEditDateOfBirthDatePicker" editable="false" maxWidth="250.0" prefWidth="250.0" promptText="-" GridPane.columnIndex="1">
+                        <GridPane.margin>
+                            <Insets left="10.0" />
+                        </GridPane.margin>
+                    </DatePicker>
+                </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <Label text="Gender" GridPane.halignment="RIGHT">
+                        <font>
+                            <Font name="Verdana" size="24.0" />
+                        </font>
+                    </Label>
+                    <ComboBox fx:id="employeeEditGenderComboBox" maxWidth="250.0" prefWidth="250.0" promptText="-" GridPane.columnIndex="1">
+                        <GridPane.margin>
+                            <Insets left="10.0" />
+                        </GridPane.margin>
+                    </ComboBox>
+                </children>
+            </GridPane>
+            <Button mnemonicParsing="false" onAction="#edit" prefWidth="250.0" text="Edit" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <GridPane GridPane.rowIndex="5">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <Label text="Contract:" GridPane.halignment="RIGHT">
+                        <font>
+                            <Font name="Verdana" size="24.0" />
+                        </font>
+                    </Label>
+                    <ComboBox fx:id="employeeEditContractComboBox" maxWidth="250.0" prefWidth="250.0" promptText="-" GridPane.columnIndex="1">
+                        <GridPane.margin>
+                            <Insets left="10.0" />
+                        </GridPane.margin>
+                    </ComboBox>
+                </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <Label text="Role:" GridPane.halignment="RIGHT">
+                        <font>
+                            <Font name="Verdana" size="24.0" />
+                        </font>
+                    </Label>
+                    <ComboBox fx:id="employeeEditRoleComboBox" maxWidth="250.0" prefWidth="250.0" promptText="-" GridPane.columnIndex="1">
+                        <GridPane.margin>
+                            <Insets left="10.0" />
+                        </GridPane.margin>
+                    </ComboBox>
+                </children>
+            </GridPane>
+        </children>
+    </GridPane>
+</AnchorPane>
