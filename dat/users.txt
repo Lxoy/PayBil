@@ -2,4 +2,3 @@ marko.horvat@example.com:$2a$12$dWmWpZce16uzxPHst1lEyuBpL15YI7.KgTNMGFTM/bUlgwcx
 ana.ivic@example.com:$2a$12$YCVUtnqv04BIIDphFuqp/O54WlP0KoiL3RU5r7WtGnukCvC49etd2
 petar.kovacic@example.com:$2a$12$L2oo1aeHfw7OLzlr23cvsu4CaYhWS7NJt60pDP5oNKl6aqOcIpEGG
 ivana.juric@example.com:$2a$12$zFWMo.th7PVgOKboP4AsKuWuQF21lll6rrFKIG8qGbYZzXQ/3KE.i
-***REMOVED***
