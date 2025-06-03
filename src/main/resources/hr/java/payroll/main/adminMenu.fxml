@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxWidth="1400.0" prefHeight="26.0" prefWidth="1400.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.payroll.controller.AdminMenuController">
+   <children>
+      <GridPane prefHeight="25.0" prefWidth="1400.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1315.0" minWidth="1290.0" prefWidth="1290.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <MenuBar prefHeight="30.0" prefWidth="1266.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Employee">
+                    <items>
+                        <MenuItem fx:id="employeeList" mnemonicParsing="false" text="List of employees" />
+                        <MenuItem fx:id="employeeAdd" mnemonicParsing="false" text="Add new employee" />
+                        <MenuItem fx:id="employeeEdit" mnemonicParsing="false" text="Edit employee" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Contract">
+                     <items>
+                        <Menu mnemonicParsing="false" text="Full Time">
+                          <items>
+                              <MenuItem fx:id="contractFullTimeList" mnemonicParsing="false" text="List of contracts" />
+                              <MenuItem fx:id="contractFullTimeAdd" mnemonicParsing="false" text="Add new contract" />
+                              <MenuItem fx:id="contractFullTimeEdit" mnemonicParsing="false" text="Edit contract" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Part Time">
+                           <items>
+                              <MenuItem fx:id="contractPartTimeList" mnemonicParsing="false" text="List of contracts" />
+                              <MenuItem fx:id="contractPartTimeAdd" mnemonicParsing="false" text="Add new contract" />
+                              <MenuItem fx:id="contractPartTimeEdit" mnemonicParsing="false" text="Edit contract" />
+                           </items>
+                        </Menu>
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Payroll">
+                     <items>
+                        <MenuItem fx:id="payrollHistory" mnemonicParsing="false" text="History" />
+                        <MenuItem fx:id="generatePayslip" mnemonicParsing="false" text="Payslip" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Changes">
+                     <items>
+                        <MenuItem fx:id="changesHistory" mnemonicParsing="false" text="History" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <MenuBar prefHeight="30.0" prefWidth="102.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Sign out">
+                     <items>
+                        <MenuItem fx:id="signOut" mnemonicParsing="false" text="Sign out" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

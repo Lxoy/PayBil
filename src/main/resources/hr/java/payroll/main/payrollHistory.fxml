@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1400.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.payroll.controller.PayrollHistoryController">
+    <fx:include source="adminMenu.fxml" />
+    <GridPane layoutY="27.0" prefHeight="673.0" prefWidth="1400.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <TableView fx:id="payrollHistoryTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowSpan="2">
+                <columns>
+                    <TableColumn fx:id="payrollHistoryIDTableColumn" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" text="ID" />
+                    <TableColumn fx:id="payrollHistoryEmployeeIDTableColumn" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" text="Employee ID" />
+                    <TableColumn fx:id="payrollHistoryGrossSalaryTableColumn" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" text="Gross salary" />
+                    <TableColumn fx:id="payrollHistoryNetSalaryTableColumn" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" text="Net Salary" />
+               <TableColumn fx:id="payrollHistoryBonusTableColumn" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" text="Bonus" />
+               <TableColumn fx:id="payrollHistoryHoursWorkedTableColumn" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" text="Hours Worked" />
+                    <TableColumn fx:id="payrollHistorPayrollPeriodTableColumn" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" text="Payroll period" />
+                    <TableColumn fx:id="payrollHistoryPaymentDateTableColumn" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" text="Payment date" />
+                </columns>
+            </TableView>
+            <GridPane prefHeight="177.0" prefWidth="847.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <GridPane prefWidth="250.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <TextField fx:id="payrollHistoryEmployeeIDTextField" maxWidth="250.0" prefWidth="250.0" promptText="Employee ID" GridPane.halignment="RIGHT">
+                                <font>
+                                    <Font name="Verdana" size="12.0" />
+                                </font>
+                        <GridPane.margin>
+                           <Insets right="100.0" />
+                        </GridPane.margin></TextField>
+                            <TextField fx:id="payrollHistoryGrossSalaryTextField" maxWidth="250.0" prefWidth="250.0" promptText="Gross Salary" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                <font>
+                                    <Font name="Verdana" size="12.0" />
+                                </font>
+                        <GridPane.margin>
+                           <Insets right="100.0" />
+                        </GridPane.margin></TextField>
+                            <TextField fx:id="payrollHistoryNetSalaryTextField" maxWidth="250.0" prefWidth="250.0" promptText="Net Salary" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                <font>
+                                    <Font name="Verdana" size="12.0" />
+                                </font>
+                        <GridPane.margin>
+                           <Insets left="100.0" />
+                        </GridPane.margin></TextField>
+                            <Button maxWidth="250.0" mnemonicParsing="false" onAction="#search" prefWidth="250.0" text="Serach" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                        <GridPane.margin>
+                           <Insets right="100.0" />
+                        </GridPane.margin></Button>
+                            <Button maxWidth="250.0" mnemonicParsing="false" onAction="#clear" prefWidth="250.0" text="Clear" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                        <GridPane.margin>
+                           <Insets left="100.0" />
+                        </GridPane.margin></Button>
+                     <DatePicker fx:id="payrollHistoryPaymentDateDatePicker" editable="false" maxWidth="250.0" prefWidth="250.0" promptText="Payment Date" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+                        <GridPane.margin>
+                           <Insets left="100.0" />
+                        </GridPane.margin></DatePicker>
+                     <TextField fx:id="payrollHistoryBonusTextField" maxWidth="250.0" prefWidth="250.0" promptText="Bonus" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                        <GridPane.margin>
+                           <Insets right="100.0" />
+                        </GridPane.margin>
+                     </TextField>
+                     <TextField fx:id="payrollHistoryHoursWorkedTextField" maxWidth="250.0" prefWidth="250.0" promptText="Hours Worked" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                        <GridPane.margin>
+                           <Insets left="100.0" />
+                        </GridPane.margin>
+                     </TextField>
+                        </children>
+                    </GridPane>
+                </children>
+            </GridPane>
+        </children>
+    </GridPane>
+
+</AnchorPane>
