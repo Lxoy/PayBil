@@ -81,8 +81,8 @@ Users see a streamlined dashboard focused on their own salary and contract detai
 - Project root — configuration files (`database.properties`, `email.properties`)
 - `src/` — source code  
 - `sql/database.sql` — database initialization script  
-- `resources/styles/app.css` — UI styling  
-- `logs/application.log` — application logs  
+- `src/main/resources/hr/java/payroll/style.css` — UI styling  
+- `logs/logs.log` — application logs  
 
 ---
 
